@@ -1,0 +1,44 @@
+<GuiXml>
+   <Controls>
+		<TopLevelControl name="Salsa" mouseEnabled="true" hidden="true">
+			<Dimensions x="230" y="200" />
+			<Anchor offsetX="-600" offsetY="-400" point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="GuiRoot" />
+			<Controls>
+				<Backdrop name="$(parent)Bg" integralWrapping="true">
+					<Anchor point="TOPLEFT" offsetX="-8" offsetY="-6"/>
+					<Anchor point="BOTTOMRIGHT" offsetX="4" offsetY="4"/>
+					<Edge file="EsoUI/Art/ChatWindow/chat_BG_edge.dds" edgeFileWidth="256" edgeFileHeight="256" edgeSize="32"/>
+					<Center file="EsoUI/Art/ChatWindow/chat_BG_center.dds" />
+					<Insets left="32" top="32" right="-32" bottom="-32" />
+				</Backdrop>
+				
+				<Button name="$(parent)Play">
+					<Dimensions x="80" y="80" />
+					<OnClicked>
+						Salsa_PlaySound()
+					</OnClicked>
+					<OnMouseWheel>
+						Salsa_NextSound(_, delta)
+					</OnMouseWheel>
+					<FontColors
+						normalColor="INTERFACE_COLOR_TYPE_TEXT_COLORS:INTERFACE_TEXT_COLOR_NORMAL"
+						pressedColor="INTERFACE_COLOR_TYPE_TEXT_COLORS:INTERFACE_TEXT_COLOR_SELECTED"
+						mouseOverColor="INTERFACE_COLOR_TYPE_TEXT_COLORS:INTERFACE_TEXT_COLOR_HIGHLIGHT"
+					/>
+					<Textures
+						normal="esoui/art/treeicons/tutorial_idexicon_gettingstarted_up.dds"
+						pressed="esoui/art/treeicons/tutorial_idexicon_gettingstarted_down.dds"
+					/>
+
+					<Anchor point="CENTER" relativePoint="CENTER" relativeTo="$(parent)" />
+				</Button>
+				
+				<Label name="$(parent)SoundName" font="ZoFontGame" horizontalAlignment="CENTER">
+               <Dimensions x="185" />
+					<Anchor offsetY="-10" point="BOTTOM" relativePoint="BOTTOM" relativeTo="$(parent)" />
+				</Label>
+				
+			</Controls>
+		</TopLevelControl>
+	</Controls>
+</GuiXml>

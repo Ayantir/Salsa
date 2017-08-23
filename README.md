@@ -1,1 +1,1 @@
-# Salsa
+A little sound tester for ElderScrolls Online addons
