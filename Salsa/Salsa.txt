@@ -7,8 +7,8 @@
 ## Title: Salsa
 ## Description: Sounds previewing
 ## Author: Ayantir
-## Version: 1
-## APIVersion: 100020
+## Version: 2
+## APIVersion: 100020 100021
 
 Salsa.lua
 Salsa.xml
